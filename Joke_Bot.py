@@ -1,5 +1,11 @@
+import json
+
 import requests
 from discord.ext import commands
+
+
+with open("config.json", "r") as f:
+    config = json.loads(f.read())
 
 # https://v2.jokeapi.dev/joke/Any?type=single
 # https://v2.jokeapi.dev/joke/Programming?type=single&blacklistFlags=nsfw
@@ -36,5 +42,5 @@ async def joke(ctx, arg_1=None, arg_2=None):
         await ctx.send(joke_api.get_joke(arg_1, arg_2))
 
 print('Bot Started.')
-bot.run('ODM3MDUwNzQ0OTc5ODQ5MjU2.YIm6QQ.EGNYI4kVDKJi3HnBXMMm69HZIHM')
+bot.run(config['TOKEN'])
 
