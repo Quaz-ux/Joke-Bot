@@ -3,4 +3,4 @@ It is a bot for an application called Discord. Its task is to ask the API which 
 
 API link: https://sv443.net/jokeapi/v2/
 
-To run the bot you need to create 'config.json' and put you API Token in there.
+To run the bot you need to create 'config.json' and put your API Token in there.
